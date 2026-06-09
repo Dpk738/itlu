@@ -414,9 +414,9 @@ img {
   /* Dark amber warm gradient overlay for luxury hospitality feel */
   background: linear-gradient(
     to bottom,
-    rgba(45, 26, 19, 0.45) 0%,
-    rgba(45, 26, 19, 0.55) 50%,
-    rgba(45, 26, 19, 0.8) 100%
+    rgba(45, 26, 19, 0.3) 0%,
+    rgba(45, 26, 19, 0.45) 50%,
+    rgba(45, 26, 19, 0.65) 100%
   );
 }
 
@@ -1929,8 +1929,8 @@ label {
   .mobile-nav-overlay.active .mobile-menu-btn span:nth-child(2) {
     transform: rotate(-45deg) translate(5px, -5px);
   }
-  .hero-trust-indicators {
-    gap: 1.5rem;
+  .hero-trust-wrapper {
+    display: none;
   }
   .experience-grid {
     grid-template-columns: 1fr;
@@ -2014,5 +2014,55 @@ label {
   }
   .menu-modal-content {
     padding: 1.5rem;
+  }
+}
+
+/* ==========================================================================
+   16. PRELOADER LOADING PAGE
+   ========================================================================== */
+body.loading {
+  overflow: hidden !important;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-primary); /* Soft Heritage Beige matching navbar base */
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.preloader-logo {
+  height: 160px;
+  width: auto;
+  animation: logo-pulse 2s infinite ease-in-out;
+}
+
+@keyframes logo-pulse {
+  0%, 100% {
+    transform: scale(0.95);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
   }
 }

@@ -38,6 +38,48 @@ document.addEventListener('DOMContentLoaded', () => {
     window.unlockScroll = () => document.body.style.overflow = '';
   }
 
+  // 2.5 PRELOADER & INITIAL SCROLL LOCK
+  if (window.lockScroll) {
+    window.lockScroll();
+  }
+
+  const hidePreloader = () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.classList.add('fade-out');
+      document.body.classList.remove('loading');
+      if (window.unlockScroll) {
+        window.unlockScroll();
+      }
+    }
+  };
+
+  let pageLoaded = false;
+  let timerFinished = false;
+
+  const checkAndHide = () => {
+    if (pageLoaded && timerFinished) {
+      hidePreloader();
+    }
+  };
+
+  // Enforce a minimum display time of 1.5s (1500ms) for the preloader
+  setTimeout(() => {
+    timerFinished = true;
+    checkAndHide();
+  }, 1500);
+
+  // Check if fully loaded
+  if (document.readyState === 'complete') {
+    pageLoaded = true;
+    checkAndHide();
+  } else {
+    window.addEventListener('load', () => {
+      pageLoaded = true;
+      checkAndHide();
+    });
+  }
+
   // 3. SCROLL PROGRESS INDICATOR
   window.addEventListener('scroll', () => {
     const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
