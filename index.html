@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITLU | Classic South Indian Vegetarian Fine Dining Hyderabad</title>
+  <meta name="description" content="Experience authentic South Indian vegetarian cuisines inspired by the traditional kitchens of Andhra, Telangana, Karnataka, Tamil Nadu, and Kerala at ITLU.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon Bypass -->
+  <link rel="icon" href="data:,">
+  
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="logo-link">
+        <img src="Assets/Itlu_logo.png" alt="ITLU Logo" class="nav-logo">
+      </a>
+      <nav class="nav-links">
+        <a href="#about" class="nav-item">Our Story</a>
+        <a href="#experiences" class="nav-item">Experiences</a>
+        <a href="#menu" class="nav-item">Menu</a>
+        <a href="#thali" class="nav-item">Rajabhojanam</a>
+        <a href="#why-us" class="nav-item">Why Itlu</a>
+        <a href="#locations" class="nav-item">Locations</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-secondary open-reserve-modal">Book A Table</button>
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Navigation -->
+  <div class="mobile-nav-overlay">
+    <div class="mobile-nav-content">
+      <a href="#about" class="mobile-nav-item">Our Story</a>
+      <a href="#experiences" class="mobile-nav-item">Experiences</a>
+      <a href="#menu" class="mobile-nav-item">Menu</a>
+      <a href="#thali" class="mobile-nav-item">Rajabhojanam</a>
+      <a href="#why-us" class="mobile-nav-item">Why Itlu</a>
+      <a href="#locations" class="mobile-nav-item">Locations</a>
+      <button class="btn btn-primary open-reserve-modal" style="margin-top: 2rem;">Reserve Your Table</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-container">
+      <img src="Assets/ChatGPT Image Jun 8, 2026, 11_36_47 PM.png" alt="South Indian Premium Vegetarian Spread" class="hero-bg-image">
+      <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="hero-content container">
+      <div class="hero-text-block">
+        <span class="section-label fade-up">ITLU VEGETARIAN</span>
+        <h1 class="hero-title fade-up delay-1">Southern Heritage Served On Every Plate</h1>
+        <p class="hero-subtitle fade-up delay-2">
+          Experience authentic vegetarian cuisines inspired by the traditional kitchens of Andhra, Telangana, Karnataka, Tamil Nadu, and Kerala. Crafted with heritage recipes and served in a premium dining experience.
+        </p>
+        <div class="hero-ctas fade-up delay-3">
+          <button class="btn btn-secondary open-reserve-modal">Reserve Your Table</button>
+          <a href="#menu" class="btn btn-outline-white">Explore Our Menu</a>
+        </div>
+      </div>
+      
+      <!-- Hero Trust Indicators Wrapper -->
+      <div class="hero-trust-wrapper fade-up delay-4">
+        <div class="hero-trust-indicators">
+          <div class="trust-item">
+            <span class="trust-icon"><i data-lucide="star"></i></span>
+            <div class="trust-text">
+              <strong>4.2 Rating</strong>
+              <span>Customer Love</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon"><i data-lucide="map-pin"></i></span>
+            <div class="trust-text">
+              <strong>Jubilee Hills</strong>
+              <span>Prime Fine Dining</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon"><i data-lucide="map-pin"></i></span>
+            <div class="trust-text">
+              <strong>Financial District</strong>
+              <span>Luxury Ambiance</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon"><i data-lucide="clock"></i></span>
+            <div class="trust-text">
+              <strong>8 AM – 11 PM</strong>
+              <span>Open Daily</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon"><i data-lucide="car"></i></span>
+            <div class="trust-text">
+              <strong>Valet Parking</strong>
+              <span>Parking Available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-scroll-indicator">
+      <div class="mouse-icon">
+        <div class="wheel"></div>
+      </div>
+      <span>Scroll To Explore</span>
+    </div>
+  </section>
+
+  <!-- About Section ("Our Story") -->
+  <section class="about-section section-padding" id="about">
+    <div class="container split-layout">
+      <div class="about-image-side reveal-left">
+        <div class="image-wrapper">
+          <img src="Assets/itlu_image _database/541141574_17972184143926779_586691181632150569_n.jpg" alt="Traditional South Indian Family Dining" class="about-img">
+          <div class="image-border-decoration"></div>
+        </div>
+      </div>
+      <div class="about-content-side reveal-right">
+        <span class="section-label">OUR STORY</span>
+        <h2 class="section-title">Rooted In Southern Traditions</h2>
+        <div class="decor-line"></div>
+        <p class="about-text">
+          ITLU is a loving celebration of the rich, diverse vegetarian culinary history of Southern India. Rooted in the timeless warmth of traditional kitchens, our recipes have been passed down through generations—honed in grandmother's homes and regional feasts across Andhra, Telangana, Karnataka, Tamil Nadu, and Kerala.
+        </p>
+        <p class="about-text">
+          We combine time-honored cooking methods—like slow-simmered brass-pot pulaos, stone-ground chutneys, and freshly prepared tiffins—with modern, refined presentation to deliver a sophisticated dining experience. Every recipe is a tribute to the hands that built our culture.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number">5</span>
+            <span class="stat-label">SOUTHERN STATES</span>
+          </div>
+          <div class="stat-item font-separator">|</div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">VEGETARIAN</span>
+          </div>
+          <div class="stat-item font-separator">|</div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">FAMILY RECIPES</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Southern Experiences Section -->
+  <section class="experiences-section section-padding bg-secondary-shade" id="experiences">
+    <div class="container text-center">
+      <span class="section-label">CURATED MENU PATHS</span>
+      <h2 class="section-title">Signature Southern Experiences</h2>
+      <p class="section-subtitle">Discover our highly celebrated, uniquely crafted culinary categories.</p>
+      <div class="decor-line center"></div>
+      
+      <div class="experience-grid">
+        <!-- Card 1 -->
+        <div class="experience-card fade-up">
+          <div class="card-img-container">
+            <img src="Assets/itlu_image _database/521967058_17968097015926779_6309576831323596186_n.jpg" alt="Ammamma Specials" class="card-img">
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Ammamma Specials</h3>
+            <p class="card-description">Traditional recipes inspired by grandmother's kitchens, slow-cooked with fresh local ingredients.</p>
+            <a href="#menu" class="card-link select-category-trigger" data-category="Ammamma Specials">Explore Category &rarr;</a>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="experience-card fade-up delay-1">
+          <div class="card-img-container">
+            <img src="Assets/itlu_image _database/543582091_17973129800926779_8413220345255205412_n.jpg" alt="Itlu Special Pulaos" class="card-img">
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Itlu Special Pulaos</h3>
+            <p class="card-description">Fragrant regional rice dishes crafted with hand-ground spices and premium basmati rice.</p>
+            <a href="#menu" class="card-link select-category-trigger" data-category="Special Pulaos">Explore Category &rarr;</a>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="experience-card fade-up delay-2">
+          <div class="card-img-container">
+            <!-- Thali themed background image from the database -->
+            <img src="Assets/itlu_image _database/547901672_17973724025926779_818756234925879880_n.jpg" alt="Rajabhojanam Thali" class="card-img">
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Rajabhojanam Thali</h3>
+            <p class="card-description">A majestic Southern feast comprising curated curries, starters, breads, and authentic desserts.</p>
+            <a href="#thali" class="card-link">View Royal Feast &rarr;</a>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="experience-card fade-up delay-3">
+          <div class="card-img-container">
+            <img src="Assets/itlu_image _database/625157085_18055613045675993_7522438250471273845_n.jpg" alt="Tiffins" class="card-img">
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Tiffins</h3>
+            <p class="card-description">Classic breakfast favorites prepared fresh every single day, served steaming hot with chutneys.</p>
+            <a href="#menu" class="card-link select-category-trigger" data-category="Tiffins">Explore Category &rarr;</a>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="experience-card fade-up delay-4">
+          <div class="card-img-container">
+            <img src="Assets/itlu_image _database/623864433_18094447376311453_1220227685774927103_n.jpg" alt="Chef's Specials" class="card-img">
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Chef's Specials</h3>
+            <p class="card-description">Creative contemporary dishes unique to Itlu, blending heritage ingredients in surprising ways.</p>
+            <a href="#menu" class="card-link select-category-trigger" data-category="Mains">Explore Category &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Showcase Section -->
+  <section class="menu-showcase-section section-padding" id="menu">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">OUR DISHES</span>
+        <h2 class="section-title">The Culinary Canvas</h2>
+        <p class="section-subtitle">Browse a curated preview of our recipes by category.</p>
+        <div class="decor-line center"></div>
+      </div>
+
+      <!-- Interactive Category Selectors -->
+      <div class="menu-categories-nav fade-up">
+        <button class="category-tab active" data-category="Tiffins">Tiffins</button>
+        <button class="category-tab" data-category="Soups">Soups</button>
+        <button class="category-tab" data-category="Appetizers">Appetizers</button>
+        <button class="category-tab" data-category="Mains">Mains</button>
+        <button class="category-tab" data-category="Special Pulaos">Special Pulaos</button>
+        <button class="category-tab" data-category="Desserts">Desserts</button>
+      </div>
+
+      <!-- Preview Dishes Container -->
+      <div class="menu-preview-container fade-up">
+        <div class="menu-preview-grid" id="menu-preview-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <div class="text-center menu-cta-block fade-up">
+        <p class="menu-note">We offer many more delicacies including Jain Specials, Indian Breads, Snacks, Beverages, and a dedicated Kids Menu.</p>
+        <button class="btn btn-primary open-menu-modal">View Full Menu</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rajabhojanam Thali Section -->
+  <section class="thali-section section-padding" id="thali">
+    <div class="thali-bg-parallax"></div>
+    <div class="container thali-grid">
+      <div class="thali-visual-side reveal-left">
+        <!-- Majestic Vector Thali Illustration -->
+        <div class="thali-illustration">
+          <div class="thali-plate">
+            <!-- Brass plate structure -->
+            <div class="thali-rim"></div>
+            <!-- Central Rice Bowl -->
+            <div class="katori katori-center">
+              <div class="katori-inner rice">
+                <span class="dish-label">Neyyi Annam</span>
+              </div>
+            </div>
+            <!-- Surrounding Bowls (Katoris) -->
+            <div class="katori k0">
+              <div class="katori-inner dal">
+                <span class="dish-label">Pappu</span>
+              </div>
+            </div>
+            <div class="katori k1">
+              <div class="katori-inner curry-1">
+                <span class="dish-label">Paneer Iguru</span>
+              </div>
+            </div>
+            <div class="katori k2">
+              <div class="katori-inner sambar">
+                <span class="dish-label">Sambar</span>
+              </div>
+            </div>
+            <div class="katori k3">
+              <div class="katori-inner rasam">
+                <span class="dish-label">Charu</span>
+              </div>
+            </div>
+            <div class="katori k4">
+              <div class="katori-inner curd">
+                <span class="dish-label">Perugu</span>
+              </div>
+            </div>
+            <div class="katori k5">
+              <div class="katori-inner sweet">
+                <span class="dish-label">Kesari</span>
+              </div>
+            </div>
+            <div class="thali-bread">
+              <span class="dish-label">Poori</span>
+            </div>
+            <div class="thali-podi">
+              <span class="dish-label">Karam</span>
+            </div>
+          </div>
+          <div class="thali-sparkles">
+            <span class="sparkle s1">✦</span>
+            <span class="sparkle s2">✦</span>
+            <span class="sparkle s3">✦</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="thali-content-side reveal-right">
+        <span class="section-label">THE MAJESTIC THALI</span>
+        <h2 class="section-title">The Royal Southern Feast</h2>
+        <div class="decor-line"></div>
+        <div class="thali-price-badge">
+          <span class="price-lbl">RAJABHOJANAM</span>
+          <span class="price-val">₹399</span>
+        </div>
+        <p class="thali-text">
+          Our Rajabhojanam Thali is the ultimate culinary journey across the five Southern states. Served traditionally in custom brassware, it is a beautifully balanced royal meal designed to engage all your five senses.
+        </p>
+        
+        <div class="thali-includes">
+          <h4 class="includes-title">A Curated Feast Including:</h4>
+          <ul class="includes-list">
+            <li><i data-lucide="check"></i> <span><strong>Ammamma Specials</strong>: Slow-cooked regional signature curries</span></li>
+            <li><i data-lucide="check"></i> <span><strong>Neyyi Annam & Pappu</strong>: Steaming rice served with pure ghee and regional dal</span></li>
+            <li><i data-lucide="check"></i> <span><strong>Sambar & Charu</strong>: Authentic, aromatic lentil soup and tangy pepper rasam</span></li>
+            <li><i data-lucide="check"></i> <span><strong>Traditional Breads</strong>: Hot, puffy pooris served fresh from the kadai</span></li>
+            <li><i data-lucide="check"></i> <span><strong>Podi & Pachadi</strong>: Hand-pounded spice powders and spicy chutneys</span></li>
+            <li><i data-lucide="check"></i> <span><strong>Dessert</strong>: Rich, traditional sweets like Kesari and Payasam</span></li>
+          </ul>
+        </div>
+        
+        <button class="btn btn-primary open-reserve-modal">Reserve For Family Dining</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Itlu Section -->
+  <section class="why-section section-padding bg-secondary-shade" id="why-us">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">THE ITLU STANDARD</span>
+        <h2 class="section-title">Rooted in Authenticity & Hospitality</h2>
+        <div class="decor-line center"></div>
+      </div>
+      
+      <div class="why-grid">
+        <!-- Feature 1 -->
+        <div class="why-card reveal-up">
+          <div class="why-icon-container">
+            <i data-lucide="leaf" class="why-icon"></i>
+          </div>
+          <h3 class="why-title">Authentic Regional Recipes</h3>
+          <p class="why-desc">We represent all five Southern states with strict adherence to authentic ingredients, family spice blends, and cooking styles.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="why-card reveal-up delay-1">
+          <div class="why-icon-container">
+            <i data-lucide="award" class="why-icon"></i>
+          </div>
+          <h3 class="why-title">Premium Dining Experience</h3>
+          <p class="why-desc">Sophisticated warm interiors, fine brass dining ware, attentive service, and an atmosphere built around Southern hospitality.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="why-card reveal-up delay-2">
+          <div class="why-icon-container">
+            <i data-lucide="users" class="why-icon"></i>
+          </div>
+          <h3 class="why-title">Family Friendly</h3>
+          <p class="why-desc">Spacious seating layouts and family thali menus curated specifically to host comfortable gatherings and celebrations.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="why-card reveal-up delay-3">
+          <div class="why-icon-container">
+            <i data-lucide="map-pin" class="why-icon"></i>
+          </div>
+          <h3 class="why-title">Convenient Locations</h3>
+          <p class="why-desc">Located in Hyderabad's premier hubs—Jubilee Hills and Financial District—with spacious layouts and valet parking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews-section section-padding" id="reviews">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">GUEST EXPERIENCES</span>
+        <h2 class="section-title">Words From Our Diners</h2>
+        <div class="decor-line center"></div>
+      </div>
+      
+      <div class="reviews-carousel-wrapper fade-up">
+        <div class="reviews-carousel" id="reviews-carousel">
+          <!-- Review 1 -->
+          <div class="review-slide active">
+            <div class="stars">★★★★★</div>
+            <p class="review-quote">"Itlu is a revelation for vegetarian dining in Hyderabad. The Ghee Karam Dosa and Rajabhojanam Thali are absolute masterpieces. The flavors are clean, deep, and bring back memories of my grandmother's cooking. Premium presentation at its finest!"</p>
+            <div class="reviewer-info">
+              <strong class="reviewer-name">Srinivas Rao</strong>
+              <span class="reviewer-meta">Verified Guest | Jubilee Hills</span>
+            </div>
+          </div>
+          <!-- Review 2 -->
+          <div class="review-slide">
+            <div class="stars">★★★★★</div>
+            <p class="review-quote">"We celebrated my parents' anniversary here and the hospitality was outstanding. The service staff is warm and attentive, and the brassware dining feels extremely rich. The Mushroom Potlam Pulao was a major highlight!"</p>
+            <div class="reviewer-info">
+              <strong class="reviewer-name">Dr. Ananya Reddy</strong>
+              <span class="reviewer-meta">Verified Guest | Financial District</span>
+            </div>
+          </div>
+          <!-- Review 3 -->
+          <div class="review-slide">
+            <div class="stars">★★★★★</div>
+            <p class="review-quote">"Finally, a fine-dining South Indian vegetarian restaurant that respects tradition. The spices are authentic and not overpowered by chillies. The Podi Idlis melt in the mouth. It's our family's weekly dining spot now."</p>
+            <div class="reviewer-info">
+              <strong class="reviewer-name">Karthik Hegde</strong>
+              <span class="reviewer-meta">Verified Guest | Jubilee Hills</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-indicators" id="carousel-indicators">
+          <span class="indicator active" data-index="0"></span>
+          <span class="indicator" data-index="1"></span>
+          <span class="indicator" data-index="2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catering Section -->
+  <section class="catering-section section-padding" id="catering">
+    <div class="catering-bg-parallax"></div>
+    <div class="catering-overlay"></div>
+    <div class="container catering-content">
+      <div class="catering-grid">
+        <div class="catering-text-side reveal-left">
+          <span class="section-label white">ITLU CATERING</span>
+          <h2 class="catering-title">Bring Southern Flavors To Your Celebration</h2>
+          <div class="decor-line white"></div>
+          <p class="catering-desc">
+            Make your special milestones unforgettable. From intimate family gatherings and traditional festivals to large corporate events, ITLU brings the rich heritage of Southern Indian cuisine to your chosen venue.
+          </p>
+          <div class="catering-features">
+            <div class="c-feat"><i data-lucide="check-circle"></i> Custom Menu curation</div>
+            <div class="c-feat"><i data-lucide="check-circle"></i> Live Dosa counter and traditional filter coffee set up</div>
+            <div class="c-feat"><i data-lucide="check-circle"></i> Royal brass service layouts and professional hospitality crew</div>
+          </div>
+        </div>
+        
+        <div class="catering-form-side reveal-right">
+          <div class="form-card">
+            <h3>Request Catering Details</h3>
+            <p>Share your event details and our culinary experts will call you back.</p>
+            
+            <form id="catering-form">
+              <div class="form-group">
+                <label for="c-name">Full Name</label>
+                <input type="text" id="c-name" class="form-control" required placeholder="Enter name">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="c-phone">Phone Number</label>
+                  <input type="tel" id="c-phone" class="form-control" required placeholder="Phone number">
+                </div>
+                <div class="form-group">
+                  <label for="c-guests">Approx. Guests</label>
+                  <input type="number" id="c-guests" class="form-control" required min="10" placeholder="e.g. 50">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="c-type">Event Type</label>
+                <select id="c-type" class="form-control">
+                  <option value="Family Gathering">Family Gathering / Celebration</option>
+                  <option value="Corporate Event">Corporate Event</option>
+                  <option value="Festival">Festival Celebration</option>
+                  <option value="Wedding / Engagement">Wedding / Engagement</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Request Pricing & Custom Menu</button>
+            </form>
+            <div id="catering-success" class="form-success-message">
+              <i data-lucide="check-circle"></i> Thank you! Our catering team will contact you shortly.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations Section -->
+  <section class="locations-section section-padding" id="locations">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">OUR KITCHENS</span>
+        <h2 class="section-title">Where To Find Us</h2>
+        <p class="section-subtitle">Experience our culinary hospitality at Hyderabad's premier locations.</p>
+        <div class="decor-line center"></div>
+      </div>
+      
+      <div class="locations-grid">
+        <!-- Location 1 -->
+        <div class="location-card reveal-left">
+          <div class="loc-img-wrapper">
+            <img src="Assets/itlu_image _database/508350561_1259687812420483_2292079616000736252_n.jpg" alt="Itlu Jubilee Hills Entrance" class="loc-img">
+            <div class="loc-img-overlay"></div>
+            <div class="loc-badge">Jubilee Hills</div>
+          </div>
+          <div class="loc-content">
+            <h3 class="loc-name">Itlu - Jubilee Hills</h3>
+            <p class="loc-address">
+              <i data-lucide="map-pin"></i> Road No. 36, Near Metro Station, Jubilee Hills, Hyderabad, Telangana 500033
+            </p>
+            <p class="loc-hours">
+              <i data-lucide="clock"></i> Open Daily: 8:00 AM – 11:00 PM
+            </p>
+            <p class="loc-feature">
+              <i data-lucide="sparkles"></i> Features: Fine Dining Room, Banquet Space, Valet Parking
+            </p>
+            <div class="loc-actions">
+              <a href="tel:+919876543210" class="btn btn-outline"><i data-lucide="phone"></i> Call Now</a>
+              <a href="https://maps.google.com/?q=Itlu+Jubilee+Hills+Hyderabad" target="_blank" class="btn btn-secondary"><i data-lucide="navigation"></i> Directions</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Location 2 -->
+        <div class="location-card reveal-right">
+          <div class="loc-img-wrapper">
+            <img src="Assets/itlu_image _database/496098919_17959253231926779_6272738874264887195_n.jpg" alt="Itlu Financial District Ambiance" class="loc-img">
+            <div class="loc-img-overlay"></div>
+            <div class="loc-badge">Financial District</div>
+          </div>
+          <div class="loc-content">
+            <h3 class="loc-name">Itlu - Financial District</h3>
+            <p class="loc-address">
+              <i data-lucide="map-pin"></i> Waverock Junction, Nanakramguda, Financial District, Gachibowli, Hyderabad, 500032
+            </p>
+            <p class="loc-hours">
+              <i data-lucide="clock"></i> Open Daily: 8:00 AM – 11:00 PM
+            </p>
+            <p class="loc-feature">
+              <i data-lucide="sparkles"></i> Features: Luxury Interiors, Private Dining, Ample Parking
+            </p>
+            <div class="loc-actions">
+              <a href="tel:+919876543211" class="btn btn-outline"><i data-lucide="phone"></i> Call Now</a>
+              <a href="https://maps.google.com/?q=Itlu+Financial+District+Hyderabad" target="_blank" class="btn btn-secondary"><i data-lucide="navigation"></i> Directions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation CTA Section -->
+  <section class="reservation-section section-padding bg-dark text-white" id="reserve-now">
+    <div class="reserve-spotlight"></div>
+    <div class="container text-center relative-z">
+      <span class="section-label gold">RESERVE A TABLE</span>
+      <h2 class="reserve-title">Experience The Timeless Heritage Of Southern Indian Flavors</h2>
+      <p class="reserve-desc">
+        Secure your table at Jubilee Hills or Financial District today. Experience a warm, refined dining experience with family and friends.
+      </p>
+      <div class="reserve-actions">
+        <button class="btn btn-secondary open-reserve-modal btn-magnetic">Book A Table Now</button>
+        <a href="tel:+919876543210" class="btn btn-outline-white btn-magnetic"><i data-lucide="phone"></i> Call To Book</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="Assets/Itlu_logo.png" alt="ITLU Logo" class="footer-logo">
+        <p class="footer-tagline">Classic Vegetarian Cuisines Across The Southern Kitchens Of India</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Our Locations</h4>
+        <ul>
+          <li><strong>Jubilee Hills</strong><br>Road No. 36, Near Metro Station, Hyderabad</li>
+          <li style="margin-top: 1rem;"><strong>Financial District</strong><br>Waverock Junction, Nanakramguda, Hyderabad</li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <ul>
+          <li>Monday – Sunday</li>
+          <li>8:00 AM – 11:00 PM</li>
+          <li style="margin-top: 1rem; color: var(--accent-gold); font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem;"><i data-lucide="car" style="width: 16px; height: 16px;"></i> Valet Parking Available</li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><i data-lucide="phone"></i> +91 98765 43210 (Jubilee Hills)</li>
+          <li><i data-lucide="phone"></i> +91 98765 43211 (Fin. District)</li>
+          <li><i data-lucide="mail"></i> reservations@itlu.in</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container flex-justify-between">
+        <p>&copy; 2026 ITLU Restaurants. All Rights Reserved. Crafted for Authentic Southern Fine Dining.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PREMIUM MODAL: FULL MENU SHOWCASE -->
+  <div class="modal-overlay" id="menu-modal">
+    <div class="modal-container menu-modal-container">
+      <button class="modal-close" id="close-menu-modal" aria-label="Close Modal">&times;</button>
+      <div class="modal-header">
+        <span class="section-label">ITLU FULL MENU</span>
+        <h2 class="modal-title">Our Culinary Heritage</h2>
+        <div class="decor-line center"></div>
+      </div>
+      
+      <div class="menu-modal-body">
+        <!-- Sidebar Links -->
+        <div class="menu-modal-sidebar">
+          <a href="#m-tiffins" class="sidebar-tab active">Tiffins</a>
+          <a href="#m-soups" class="sidebar-tab">Soups</a>
+          <a href="#m-appetizers" class="sidebar-tab">Appetizers</a>
+          <a href="#m-mains" class="sidebar-tab">Mains</a>
+          <a href="#m-specials" class="sidebar-tab">Ammamma Specials</a>
+          <a href="#m-pulaos" class="sidebar-tab">Special Pulaos</a>
+          <a href="#m-breads" class="sidebar-tab">Indian Breads</a>
+          <a href="#m-rice" class="sidebar-tab">Rice & Noodles</a>
+          <a href="#m-jain" class="sidebar-tab">Jain Specials</a>
+          <a href="#m-snacks" class="sidebar-tab">Snacks</a>
+          <a href="#m-desserts" class="sidebar-tab">Desserts</a>
+          <a href="#m-beverages" class="sidebar-tab">Beverages</a>
+          <a href="#m-kids" class="sidebar-tab">Kids Menu</a>
+        </div>
+        
+        <!-- Scrolling Menu Lists -->
+        <div class="menu-modal-content" id="menu-modal-content">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PREMIUM MODAL: TABLE RESERVATION -->
+  <div class="modal-overlay" id="reserve-modal">
+    <div class="modal-container reserve-modal-container">
+      <button class="modal-close" id="close-reserve-modal" aria-label="Close Modal">&times;</button>
+      <div class="modal-header">
+        <span class="section-label">RESERVATION</span>
+        <h2 class="modal-title">Book A Heritage Table</h2>
+        <div class="decor-line center"></div>
+      </div>
+      
+      <div class="modal-body">
+        <form id="reservation-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="r-name">Full Name</label>
+              <input type="text" id="r-name" class="form-control" required placeholder="Enter full name">
+            </div>
+            <div class="form-group">
+              <label for="r-phone">Phone Number</label>
+              <input type="tel" id="r-phone" class="form-control" required placeholder="Enter phone number">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="r-location">Select Location</label>
+              <select id="r-location" class="form-control" required>
+                <option value="Jubilee Hills">Itlu - Jubilee Hills</option>
+                <option value="Financial District">Itlu - Financial District</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="r-guests">Number of Guests</label>
+              <select id="r-guests" class="form-control" required>
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+                <option value="9+">9+ Guests (Family Gathering)</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="r-date">Date</label>
+              <input type="date" id="r-date" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="r-time">Preferred Time</label>
+              <select id="r-time" class="form-control" required>
+                <!-- Lunch Slots -->
+                <option value="" disabled>-- Lunch slots --</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="12:30 PM">12:30 PM</option>
+                <option value="1:00 PM">1:00 PM</option>
+                <option value="1:30 PM">1:30 PM</option>
+                <option value="2:00 PM">2:00 PM</option>
+                <option value="2:30 PM">2:30 PM</option>
+                <!-- Dinner Slots -->
+                <option value="" disabled>-- Dinner slots --</option>
+                <option value="7:00 PM">7:00 PM</option>
+                <option value="7:30 PM">7:30 PM</option>
+                <option value="8:00 PM">8:00 PM</option>
+                <option value="8:30 PM">8:30 PM</option>
+                <option value="9:00 PM">9:00 PM</option>
+                <option value="9:30 PM">9:30 PM</option>
+                <option value="10:00 PM">10:00 PM</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="r-note">Special Notes (Allergies, Celebrations, Jain Requests)</label>
+            <textarea id="r-note" class="form-control" rows="2" placeholder="Let us know how we can make your dining experience special..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-block">Confirm Table Reservation</button>
+        </form>
+        
+        <div id="reserve-success" class="form-success-message">
+          <i data-lucide="check-circle"></i>
+          <h3>Reservation Confirmed!</h3>
+          <p>A confirmation SMS and email have been sent to your phone. We look forward to serving you!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lucide Icon Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Core Logic Script -->
+  <script src="app.js"></script>
+</body>
+</html>
