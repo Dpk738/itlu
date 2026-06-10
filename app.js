@@ -56,9 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let pageLoaded = false;
   let timerFinished = false;
+  let framesLoaded = false;
 
   const checkAndHide = () => {
-    if (pageLoaded && timerFinished) {
+    if (pageLoaded && timerFinished && framesLoaded) {
       hidePreloader();
     }
   };
@@ -78,6 +79,128 @@ document.addEventListener('DOMContentLoaded', () => {
       pageLoaded = true;
       checkAndHide();
     });
+  }
+
+  // 2.6 SCROLL-DRIVEN SEQUENCE ANIMATION (BIRYANI CANVASES)
+  const canvas = document.getElementById('biryani-canvas');
+  const ctx = canvas ? canvas.getContext('2d') : null;
+  const sequenceContainer = document.getElementById('scroll-sequence-container');
+  const frameCount = 186;
+  const frames = [];
+  let currentFrameIndex = -1;
+
+  // Preload frames helper
+  const preloadFrames = () => {
+    let loaded = 0;
+    for (let i = 1; i <= frameCount; i++) {
+      const img = new Image();
+      const frameNum = String(i).padStart(4, '0');
+      img.src = `Assets/frames/frame_${frameNum}.jpg`;
+      img.onload = () => {
+        loaded++;
+        if (loaded === 1 && canvas && ctx) {
+          // Render first frame immediately once loaded so canvas isn't blank
+          resizeCanvas();
+        }
+        if (loaded === frameCount) {
+          framesLoaded = true;
+          checkAndHide();
+        }
+      };
+      img.onerror = () => {
+        loaded++;
+        if (loaded === frameCount) {
+          framesLoaded = true;
+          checkAndHide();
+        }
+      };
+      frames.push(img);
+    }
+  };
+
+  function getScrollProgress() {
+    if (!sequenceContainer) return 0;
+    const rect = sequenceContainer.getBoundingClientRect();
+    const totalScrollableHeight = rect.height - window.innerHeight;
+    if (totalScrollableHeight <= 0) return 0;
+    const scrolled = -rect.top;
+    return Math.min(Math.max(scrolled / totalScrollableHeight, 0), 1);
+  }
+
+  function drawImageProp(ctx, img, x, y, w, h, offsetX, offsetY) {
+    if (arguments.length < 2) return;
+    if (typeof x === 'undefined') x = 0;
+    if (typeof y === 'undefined') y = 0;
+    if (typeof w === 'undefined') w = ctx.canvas.width;
+    if (typeof h === 'undefined') h = ctx.canvas.height;
+    if (typeof offsetX === 'undefined') offsetX = 0.5;
+    if (typeof offsetY === 'undefined') offsetY = 0.5;
+
+    let iw = img.width,
+        ih = img.height,
+        r = Math.min(w / iw, h / ih),
+        nw = iw * r,
+        nh = ih * r,
+        cx, cy, cw, ch, ar = 1;
+
+    if (nw < w) ar = w / nw;
+    if (Math.abs(nh - h) < 0.0001 && nw < w) ar = w / nw;
+    if (nh < h) ar = h / nh;
+    nw *= ar;
+    nh *= ar;
+
+    cw = iw / (nw / w);
+    ch = ih / (nh / h);
+
+    cx = (iw - cw) * offsetX;
+    cy = (ih - ch) * offsetY;
+
+    if (cx < 0) cx = 0;
+    if (cy < 0) cy = 0;
+    if (cw > iw) cw = iw;
+    if (ch > ih) ch = ih;
+
+    ctx.drawImage(img, cx, cy, cw, ch, x, y, w, h);
+  }
+
+  function renderCanvas() {
+    if (!canvas || !ctx || frames.length === 0) return;
+    const progress = getScrollProgress();
+    const frameIndex = Math.min(
+      Math.floor(progress * (frameCount - 1)),
+      frameCount - 1
+    );
+
+    if (frameIndex === currentFrameIndex) return;
+    currentFrameIndex = frameIndex;
+
+    const img = frames[frameIndex];
+    if (!img || !img.complete) return;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw cover-centered across full canvas width and height (centered to viewport)
+    drawImageProp(ctx, img, 0, 0, canvas.width, canvas.height, 0.5, 0.5);
+  }
+
+  function resizeCanvas() {
+    if (!canvas) return;
+    const dpr = window.devicePixelRatio || 1;
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    currentFrameIndex = -1;
+    renderCanvas();
+  }
+
+  // Initialize frame loading and resize/scroll listeners
+  if (canvas) {
+    preloadFrames();
+    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('scroll', renderCanvas);
+    if (lenis) {
+      lenis.on('scroll', renderCanvas);
+    }
   }
 
   // 3. SCROLL PROGRESS INDICATOR
@@ -113,23 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
       heroBg.style.transform = `scale(${scale}) translateY(${yPos}px)`;
     }
 
-    // Hero Text & Trust Indicators Parallax Fade
-    const heroText = document.querySelector('.hero-text-block');
-    const heroTrust = document.querySelector('.hero-trust-indicators');
-    
-    if (heroText) {
-      const textY = scrollPos * 0.35;
-      const textOpacity = Math.max(0, 1 - scrollPos / 600);
-      heroText.style.transform = `translateY(${textY}px)`;
-      heroText.style.opacity = `${textOpacity}`;
-    }
-    
-    if (heroTrust) {
-      const trustY = scrollPos * 0.2;
-      const trustOpacity = Math.max(0, 1 - scrollPos / 400);
-      heroTrust.style.transform = `translateY(${trustY}px)`;
-      heroTrust.style.opacity = `${trustOpacity}`;
-    }
+
 
     // Catering Parallax Background
     const cateringBg = document.querySelector('.catering-bg-parallax');
