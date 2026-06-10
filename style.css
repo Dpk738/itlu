@@ -378,54 +378,6 @@ img {
 }
 
 /* 6. HERO SECTION */
-/* Scroll-Driven Image Sequence Container */
-.scroll-sequence-container {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-}
-
-.experiences-section {
-  position: relative;
-  z-index: 3;
-}
-
-.sticky-canvas-wrapper {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-  pointer-events: none;
-  overflow: hidden;
-  background-color: #2D1A13; /* Premium deep brown matching video corner */
-  margin-bottom: -100vh; /* Pull subsequent sections back into the flow */
-}
-
-#biryani-canvas {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-/* Semi-transparent overlay to style the background canvas color */
-.canvas-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(45, 26, 19, 0.4) 0%,
-    rgba(45, 26, 19, 0.5) 50%,
-    rgba(45, 26, 19, 0.7) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-}
-
 .hero-section {
   position: relative;
   height: 100vh;
@@ -435,9 +387,37 @@ img {
   align-items: center;
   overflow: hidden;
   padding-top: var(--header-height);
-  z-index: 2; /* Render text content on top of sticky canvas */
-  background: transparent; /* Transparent to show the sequence animation clearly */
-  transition: background 0.5s ease;
+}
+
+.hero-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.15); /* Start scaled up to allow clean zoom-out on scroll */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Dark amber warm gradient overlay for luxury hospitality feel */
+  background: linear-gradient(
+    to bottom,
+    rgba(45, 26, 19, 0.3) 0%,
+    rgba(45, 26, 19, 0.45) 50%,
+    rgba(45, 26, 19, 0.65) 100%
+  );
 }
 
 .hero-content {
@@ -569,10 +549,8 @@ img {
 
 /* 7. ABOUT SECTION ("OUR STORY") */
 .about-section {
-  background: transparent; /* Transparent to show the sequence animation clearly */
+  background-color: var(--bg-primary);
   position: relative;
-  z-index: 2; /* Render text content on top of sticky canvas */
-  transition: background 0.5s ease;
 }
 
 .split-layout {
@@ -582,35 +560,42 @@ img {
   align-items: center;
 }
 
-.about-spacer-side {
+.about-image-side {
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  box-shadow: var(--shadow-premium);
+  overflow: hidden;
+}
+
+.about-img {
   width: 100%;
-  height: 100%;
-  min-height: 400px;
+  height: 550px;
+  object-fit: cover;
+  transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Responsive adjustments for scroll sequence */
-@media (max-width: 1024px) {
-  .hero-section {
-    background: transparent !important;
-    backdrop-filter: none !important;
-  }
-  .about-section {
-    background: transparent !important;
-    backdrop-filter: none !important;
-  }
-  .about-spacer-side {
-    display: none;
-  }
+.image-wrapper:hover .about-img {
+  transform: scale(1.05);
 }
 
-.about-section .section-title {
-  color: #fff;
+.image-border-decoration {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  border: 1px solid rgba(241, 210, 164, 0.4);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .about-text {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: rgba(241, 210, 164, 0.95);
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
   font-weight: 400;
 }
@@ -621,7 +606,7 @@ img {
   gap: 1.5rem;
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(241, 210, 164, 0.15);
+  border-top: 1px solid rgba(45, 26, 19, 0.1);
 }
 
 .stat-item {
@@ -632,7 +617,7 @@ img {
 .stat-number {
   font-family: var(--font-heading);
   font-size: 2.8rem;
-  color: #fff;
+  color: var(--btn-coffee);
   line-height: 1;
   margin-bottom: 0.25rem;
 }
@@ -648,7 +633,7 @@ img {
 
 .font-separator {
   font-size: 1.5rem;
-  color: rgba(241, 210, 164, 0.3);
+  color: rgba(45, 26, 19, 0.15);
 }
 
 /* 8. SIGNATURE SOUTHERN EXPERIENCES */
