@@ -1570,6 +1570,7 @@ label {
   height: 60px;
   width: auto;
   margin-bottom: 1.5rem;
+  filter: brightness(0) saturate(100%) invert(81%) sepia(21%) saturate(1142%) hue-rotate(345deg) brightness(97%) contrast(92%);
 }
 
 .footer-tagline {
