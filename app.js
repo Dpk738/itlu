@@ -131,6 +131,15 @@ document.addEventListener('DOMContentLoaded', () => {
       heroTrust.style.opacity = `${trustOpacity}`;
     }
 
+    // Hero Scroll Indicator Parallax Fade
+    const heroScroll = document.querySelector('.hero-scroll-indicator');
+    if (heroScroll) {
+      const scrollY = scrollPos * 0.15;
+      const scrollOpacity = Math.max(0, 0.8 - scrollPos / 400);
+      heroScroll.style.transform = `translateX(-50%) translateY(${scrollY}px)`;
+      heroScroll.style.opacity = `${scrollOpacity}`;
+    }
+
     // Catering Parallax Background
     const cateringBg = document.querySelector('.catering-bg-parallax');
     if (cateringBg) {
